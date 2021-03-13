@@ -32,7 +32,7 @@ def get_tweets(username):
 
 	#write to a new csv file from the array of tweets
 	outfile = username + "_tweets.csv"
-	print "writing to " + outfile
+	print ("writing to " + outfile)
 	with open(outfile, 'w+') as file:
 		writer = csv.writer(file, delimiter=',')
 		writer.writerows(tweets_for_csv)
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
         get_tweets(sys.argv[1])
     else:
-        print "Error: enter one username"
+        print ("Error: enter one username")
 
     #alternative method: loop through multiple users
 	# users = ['user1','user2']
